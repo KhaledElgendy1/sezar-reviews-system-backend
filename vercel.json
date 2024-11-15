@@ -1,0 +1,19 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "index.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "env": {
+      "MONGO_URI": "@your-mongo-uri"
+    },
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "/index.js"
+      }
+    ]
+  }
+  
